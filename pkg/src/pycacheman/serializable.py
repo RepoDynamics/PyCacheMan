@@ -98,7 +98,7 @@ class SerializableCacheManager:
         if timestamp and self._is_expired(typ, timestamp):
             logger.info(
                 log_title,
-                f"Item expired.\n- Timestamp: {timestamp}\n- Retention Hours: {self._retention_hours}",
+                f"Item expired.\n- Timestamp: {timestamp}\n- Retention Time: {self._retention_time[typ]}",
             )
             return None
         logger.info(
